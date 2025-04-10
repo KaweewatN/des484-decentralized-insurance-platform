@@ -13,6 +13,7 @@ async function main() {
   const InsurancePolicy = await hre.ethers.getContractFactory(
     "InsurancePolicy"
   );
+
   const insurancePolicy = await InsurancePolicy.deploy(
     initialPremium,
     initialCoverage,

@@ -5,29 +5,25 @@ This project demonstrates a basic Hardhat use case. It comes with a sample contr
 Try running some of the following tasks:
 
 ```shell
-//Test
-npx hardhat test
 
 //Compile after a change
-npx hardhat compile
+yarn hardhat compile
 
 //Start node
-npx hardhat node
+yarn hardhat node
 
-//Make sure that ./ignition/parameters.json has the correct params
-
+# //Make sure that ./ignition/parameters.json has the correct params
 //Deploy
-npx hardhat ignition deploy ./ignition/modules/Lock.ts --network localhost --parameters ./ignition/parameters.json
+yarn hardhat ignition deploy ./ignition/modules/Lock.ts
+# yarn hardhat ignition deploy ./ignition/modules/Lock.ts --network localhost --parameters ./ignition/parameters.json
+
+//Test
+yarn hardhat test
+
+//Full-Test
+yarn hardhat coverage
 
 //Copy ./artifacts/contracts/Lock.sol/Lock.json abi list to client/src/utils/Lock_ABI.json
 
 //Copy deployed address to client/src/utils/constants.js
-```
-
-```shell
-yarn hardhat help
-yarn hardhat test
-REPORT_GAS=true yarn hardhat test
-yarn hardhat node
-yarn hardhat ignition deploy ./ignition/modules/Lock.ts
 ```
